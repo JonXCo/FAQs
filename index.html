@@ -20,24 +20,21 @@
         }
         h1 {
             color: #012060;
-            font-size: 30px;
-            margin-top: 20px; /* Adjust spacing */
+            font-size: 50px;
         }
         p {
             color: #012060;
-            font-size: 20px;
-            line-height: 1.5; /* Increase line height for readability */
+            font-size: 25px;
         }
         .last-paragraph {
-            font-size: 20px;
+            font-size: 25px;
         }
         .top {
-            margin: 30px 10px; /* Adjust spacing */
+            margin: 50px;
         }
         section {
             background-color: #fff;
             margin-top: 20px;
-            padding: 20px 0; /* Add padding */
         }
         .blue-section {
             background-color: #012060;
@@ -45,15 +42,27 @@
             padding: 20px 0;
             text-align: center;
             width: 100%;
+            margin: 0;
         }
 
         .blue-section .container {
             display: flex;
-            flex-direction: column; /* Stack boxes vertically on small screens */
-            align-items: center; /* Center align boxes horizontally */
+            justify-content: center; /* Center items horizontally */
+            flex-wrap: wrap; /* Allow wrapping of boxes */
             margin-top: 20px;
+            padding: 0 20px;
         }
 
+        .blue-section .box {
+            width: 30%; /* Adjust width for desktop */
+            min-width: 400px; /* Set a minimum width for uniformity */
+            max-width: 400px; /* Set a minimum width for uniformity */
+            text-align: center;
+            border: 10px solid white;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 20px; /* Adjust margin between boxes */
+        }
         .circle {
             width: 50px;
             height: 50px;
@@ -65,22 +74,12 @@
             align-items: center;
             font-size: 24px; /* Adjust font size as needed */
             font-weight: bold;
-            margin-bottom: 20px; /* Adjust spacing */
-        }
-
-        .blue-section .box {
-            width: 90%; /* Make boxes wider on small screens */
-            text-align: center;
-            border: 10px solid white;
-            border-radius: 20px;
-            padding: 10px;
-            margin: 20px 0; /* Adjust spacing */
+            margin: 0 auto 20px; /* Center circle and adjust spacing */
+            margin-top: 20px;
         }
 
         .blue-section .box img {
             width: 100%;
-            max-width: 200px; /* Limit image width */
-            height: auto; /* Maintain aspect ratio */
             margin-bottom: 10px;
         }
 
@@ -88,13 +87,9 @@
             font-weight: bold;
             color: white;
         }
+
         .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-            font-size: 36px; /* Adjust font size */
+            font-size: 200px;
             margin-top: 10px;
             padding: 20px;
         }
@@ -107,7 +102,7 @@
             font-weight: bold;
             font-size: 20px;
             margin-top: 25px;
-            margin-bottom: 20px; /* Adjust spacing */
+            margin-bottom: 40px;
             cursor: pointer;
             min-height: 50px;
             min-width: 150px;
@@ -118,10 +113,11 @@
             margin-top: 20px;
             text-align: center; /* Center the text */
         }
-        .find-stockist-section h1 {
-            color: #012060; /* Adjust color */
-            font-size: 30px; /* Adjust font size */
-            margin-top: 20px; /* Adjust spacing */
+        .find-stockist-section h2 {
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            margin-bottom: 10px;
         }
         .highlight {
             background-color:#BA0C2F;
@@ -130,34 +126,31 @@
 
         .sub-header {
             font-weight: bold;
-            margin-bottom: 20px; /* Adjust spacing */
+            margin-bottom: 40px;
             text-align: center; /* Center the text */
         }
         .store-logos {
             display: flex;
             justify-content: center;
-            align-items: center; /* Center align logos vertically */
-            flex-wrap: wrap; /* Allow logos to wrap to the next line */
             margin-top: 20px;
         }
         .store-logo {
-            margin: 10px; /* Adjust spacing */
-        }
-        .store-logo img {
-            max-width: 100px; /* Limit logo width */
-            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px;
         }
 
-        @media only screen and (min-width: 600px) {
-            .blue-section .container {
-                flex-direction: row; /* Arrange boxes horizontally on larger screens */
+        @media only screen and (max-width: 1000px) {
+            /* Styles specific to devices narrower than 600px */
+            .store-logos {
+                display: flex;
+                flex-direction: column; /* Stack logos vertically */
+                align-items: center; /* Center logos horizontally */
             }
-
-            .blue-section .box {
-                width: 30%; /* Restore original width */
-                margin: 0 10px; /* Adjust spacing */
+            .store-logo {
+                margin: 10px 0; /* Adjust margin between logos */
             }
         }
+
+
     </style>
 </head>
 <body>
