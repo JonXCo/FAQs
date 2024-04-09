@@ -20,22 +20,24 @@
         }
         h1 {
             color: #012060;
-            text-size-adjust: 100px;
-            font-size: 50px;
+            font-size: 30px;
+            margin-top: 20px; /* Adjust spacing */
         }
         p {
             color: #012060;
-            font-size: 25px;
+            font-size: 20px;
+            line-height: 1.5; /* Increase line height for readability */
         }
         .last-paragraph {
-            font-size: 25px;
+            font-size: 20px;
         }
         .top {
-            margin: 50px;
+            margin: 30px 10px; /* Adjust spacing */
         }
         section {
             background-color: #fff;
             margin-top: 20px;
+            padding: 20px 0; /* Add padding */
         }
         .blue-section {
             background-color: #012060;
@@ -43,14 +45,13 @@
             padding: 20px 0;
             text-align: center;
             width: 100%;
-            margin: 0;
         }
 
         .blue-section .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Stack boxes vertically on small screens */
+            align-items: center; /* Center align boxes horizontally */
             margin-top: 20px;
-            padding: 0 20px;
         }
 
         .circle {
@@ -64,21 +65,22 @@
             align-items: center;
             font-size: 24px; /* Adjust font size as needed */
             font-weight: bold;
-            margin: 0 auto; /* Centers the circle horizontally */
-            margin-top: 20px; 
+            margin-bottom: 20px; /* Adjust spacing */
         }
 
         .blue-section .box {
-            width: 30%;
+            width: 90%; /* Make boxes wider on small screens */
             text-align: center;
             border: 10px solid white;
             border-radius: 20px;
             padding: 10px;
-            margin: 30px;
+            margin: 20px 0; /* Adjust spacing */
         }
 
         .blue-section .box img {
             width: 100%;
+            max-width: 200px; /* Limit image width */
+            height: auto; /* Maintain aspect ratio */
             margin-bottom: 10px;
         }
 
@@ -92,7 +94,7 @@
                 'wght' 400,
                 'GRAD' 0,
                 'opsz' 24;
-            font-size: 200px;
+            font-size: 36px; /* Adjust font size */
             margin-top: 10px;
             padding: 20px;
         }
@@ -102,11 +104,10 @@
             background-color: #BA0C2F;
             color: #fff;
             border: none;
-            padding: 20px 40px;
             font-weight: bold;
             font-size: 20px;
             margin-top: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Adjust spacing */
             cursor: pointer;
             min-height: 50px;
             min-width: 150px;
@@ -117,11 +118,10 @@
             margin-top: 20px;
             text-align: center; /* Center the text */
         }
-        .find-stockist-section h2 {
-            color: #fff;
-            font-weight: bold;
-            padding: 10px;
-            margin-bottom: 10px;
+        .find-stockist-section h1 {
+            color: #012060; /* Adjust color */
+            font-size: 30px; /* Adjust font size */
+            margin-top: 20px; /* Adjust spacing */
         }
         .highlight {
             background-color:#BA0C2F;
@@ -130,18 +130,34 @@
 
         .sub-header {
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Adjust spacing */
             text-align: center; /* Center the text */
         }
         .store-logos {
             display: flex;
             justify-content: center;
+            align-items: center; /* Center align logos vertically */
+            flex-wrap: wrap; /* Allow logos to wrap to the next line */
             margin-top: 20px;
         }
         .store-logo {
-            margin: 0 10px;
+            margin: 10px; /* Adjust spacing */
+        }
+        .store-logo img {
+            max-width: 100px; /* Limit logo width */
+            height: auto; /* Maintain aspect ratio */
         }
 
+        @media only screen and (min-width: 600px) {
+            .blue-section .container {
+                flex-direction: row; /* Arrange boxes horizontally on larger screens */
+            }
+
+            .blue-section .box {
+                width: 30%; /* Restore original width */
+                margin: 0 10px; /* Adjust spacing */
+            }
+        }
     </style>
 </head>
 <body>
